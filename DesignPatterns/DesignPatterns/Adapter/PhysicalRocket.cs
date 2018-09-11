@@ -29,7 +29,5 @@ namespace DesignPatterns.Adapter
         {
             return 0;
         }
-
-        public 
     }
 }

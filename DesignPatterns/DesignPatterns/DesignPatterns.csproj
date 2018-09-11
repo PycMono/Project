@@ -45,20 +45,38 @@
     <Compile Include="Adapter\OozinozRocket.cs" />
     <Compile Include="Adapter\PhysicalRocket.cs" />
     <Compile Include="Adapter\IRocketSim.cs" />
+    <Compile Include="Decorator\ComponentBase.cs" />
+    <Compile Include="Decorator\ConcreteComponent.cs" />
+    <Compile Include="Decorator\ConcreteDecoratorAImpl.cs" />
     <Compile Include="Facade\LogType.cs" />
     <Compile Include="Facade\LogUtil.cs" />
-    <Compile Include="Observer\BoosHander.cs" />
+    <Compile Include="Decorator\DecoratorImpl.cs" />
+    <Compile Include="Factory\CalcBase.cs" />
+    <Compile Include="Factory\FactoryMethod\AddFatoryImpl.cs" />
+    <Compile Include="Factory\FactoryMethod\IFactory.cs" />
+    <Compile Include="Factory\FactoryMethod\SubFatoryImpl.cs" />
+    <Compile Include="Factory\SimpleFactoryHandle.cs" />
+    <Compile Include="Factory\Impl\CalcAddImpl.cs" />
+    <Compile Include="Factory\Impl\CalcSubImpl.cs" />
+    <Compile Include="Observer\TaskHander.cs" />
     <Compile Include="Observer\ObserverBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\ISendGift.cs" />
+    <Compile Include="Proxy\ProxyImpl.cs" />
+    <Compile Include="Proxy\PursuitImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Adapter\Readme.txt" />
+    <Content Include="Decorator\Readme.txt" />
     <Content Include="Facade\Readme.txt" />
+    <Content Include="Factory\FactoryMethod\Readme.txt" />
     <Content Include="Observer\Readme.txt" />
+    <Content Include="Proxy\Readme.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
