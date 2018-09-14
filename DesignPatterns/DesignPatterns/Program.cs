@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+
 namespace DesignPatterns
 {
     using DesignPatterns.Proxy;

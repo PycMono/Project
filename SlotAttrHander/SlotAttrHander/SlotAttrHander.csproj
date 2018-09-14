@@ -64,15 +64,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\FightAttrEnum.cs" />
-    <Compile Include="Enum\SlotAttrTypeEnum.cs" />
+    <Compile Include="BLL\ReflectionHelper.cs" />
+    <Compile Include="BLL\Slot\Refactoring\EquipPartAttrImpl.cs" />
+    <Compile Include="BLL\Slot\SlotPartAttrHanlder.cs" />
+    <Compile Include="Model\Enum\SlotAttrEnum.cs" />
+    <Compile Include="Model\Enum\SlotAttrTypeEnum.cs" />
     <Compile Include="Model\Hero\Hero.cs" />
     <Compile Include="Model\Slot\PartAttr.cs" />
     <Compile Include="Model\Slot\SlotCalcObj.cs" />
-    <Compile Include="Operate\SlotPartAttrHanlder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Refactoring\ISlotPartAttr.cs" />
+    <Compile Include="BLL\Slot\Refactoring\ISlotPartAttr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -88,6 +90,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

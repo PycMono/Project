@@ -6,11 +6,9 @@
 // 日期：2017/5/23 13:09:47
 // 修改记录：
 //***********************************************************************************
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PycMono.Project.Slot
 {
@@ -27,9 +25,8 @@ namespace PycMono.Project.Slot
         /// <summary>
         /// 计算卡槽属性
         /// </summary>
-        /// <param name="player">玩家对象</param>
         /// <param name="info">卡槽对象信息</param>
         /// <returns>卡槽计算属性</returns>
-        Dictionary<Guid, PartAttr> CalcAttr(Player player, SlotCalcObj info);
+        Dictionary<Guid, PartAttr> CalcAttr(SlotCalcObj info);
     }
 }

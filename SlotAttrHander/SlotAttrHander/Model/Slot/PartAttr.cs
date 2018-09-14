@@ -8,6 +8,7 @@
 //***********************************************************************************
 
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace PycMono.Project.Slot
@@ -21,60 +22,11 @@ namespace PycMono.Project.Slot
     {
         #region 字段
 
-        private Int64 mHP = 0;
-        private Int32 mATK = 0;
-        private Int32 mDEF = 0;
-
-        // 你可以定义其他字段
-
-        #endregion
-
-        #region 属性
-
         /// <summary>
-        /// 生命              
-        /// </summary>       
-        public Int64 HP
-        {
-            get { return mHP; }
-            set
-            {
-                if (value != mHP)
-                {
-                    mHP = value;
-                }
-            }
-        }
-
-        /// <summary>
-        /// 攻击
+        /// 枚举属性值对应具体的加成数量
         /// </summary>
-        public Int32 ATK
-        {
-            get { return mATK; }
-            set
-            {
-                if (value != mATK)
-                {
-                    mATK = value;
-                }
-            }
-        }
-
-        /// <summary>
-        /// 防御              
-        /// </summary>       
-        public Int32 DEF
-        {
-            get { return mDEF; }
-            set
-            {
-                if (value != mDEF)
-                {
-                    mDEF = value;
-                }
-            }
-        }
+        public Dictionary<SlotAttrEnum, Int32> FightParAttrDict =
+            new Dictionary<SlotAttrEnum, Int32>();
 
         #endregion
 
@@ -89,14 +41,34 @@ namespace PycMono.Project.Slot
 
         #region 构造方法
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public PartAttr()
         {
-
+            InitFightDict();
         }
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="type">属性枚举</param>
         public PartAttr(SlotAttrTypeEnum type)
         {
             this.SlotAttrTypeID = (Int32)type;
+            InitFightDict();
+        }
+
+        /// <summary>
+        /// 初始化战斗字典
+        /// </summary>
+        private void InitFightDict()
+        {
+            // 设置各个模块属性
+            foreach (SlotAttrEnum attrType in System.Enum.GetValues(typeof(SlotAttrEnum)))
+            {
+                FightParAttrDict[attrType] = 0;
+            }
         }
 
         #endregion
@@ -114,24 +86,42 @@ namespace PycMono.Project.Slot
         }
 
         /// <summary>
-        /// 重置对象为初始化数据
+        /// 重置属性
         /// </summary>
         public void ResetAttr()
         {
-            this.HP = 0;
-            this.ATK = 0;
-            this.DEF = 0;
+            foreach (var enumID in FightParAttrDict.Keys.ToList())
+            {
+                FightParAttrDict[enumID] = 0;
+            }
         }
 
         /// <summary>
-        /// 设置属性
+        /// 合并属性
         /// </summary>
         /// <param name="partAttr">属性</param>
-        public void SetAttr(PartAttr partAttr)
+        public void MergeAttr(PartAttr partAttr)
         {
-            this.HP += partAttr.HP;
-            this.ATK += partAttr.ATK;
-            this.DEF += partAttr.DEF;
+            foreach (var keyOrValue in partAttr.FightParAttrDict)
+            {
+                FightParAttrDict[keyOrValue.Key] += keyOrValue.Value;
+            }
+        }
+
+        /// <summary>
+        /// 设置单个属性的值
+        /// </summary>
+        /// <param name="fae">属性枚举</param>
+        /// <param name="value">增加的值</param>
+        public void AddSingleValue(SlotAttrEnum fae, Int32 value)
+        {
+            if (!FightParAttrDict.ContainsKey(fae))
+            {
+                throw new Exception($"PartAttr.AddSingleValue未实现FightAttrEnum={fae.ToString()}的属性计算。");
+            }
+
+            // 设置值
+            FightParAttrDict[fae] = value;
         }
 
         /// <summary>
@@ -141,20 +131,13 @@ namespace PycMono.Project.Slot
         /// <param name="value">增加的值</param>
         public void AddValue(SlotAttrEnum fae, Int32 value)
         {
-            switch (fae)
+            if (!FightParAttrDict.ContainsKey(fae))
             {
-                case SlotAttrEnum.HP:
-                    this.HP += value;
-                    break;
-                case SlotAttrEnum.ATK:
-                    this.ATK += value;
-                    break;
-                case SlotAttrEnum.DEF:
-                    this.DEF += value;
-                    break;
-                default:
-                    throw new Exception($"Slot.AddValue未实现SlotAttrEnum={fae.ToString()}的属性计算。");
+                throw new Exception($"PartAttr.AddValue未实现FightAttrEnum={fae.ToString()}的属性计算。");
             }
+
+            // 累加值
+            FightParAttrDict[fae] += value;
         }
 
         /// <summary>
@@ -182,7 +165,7 @@ namespace PycMono.Project.Slot
         /// <summary>
         /// 增加属性
         /// </summary>
-        /// <param name="addAttr"></param>
+        /// <param name="addAttr">属性集合</param>
         public void AddValue(List<Dictionary<Int32, Int32>> addAttr)
         {
             foreach (var item in addAttr)
@@ -192,15 +175,18 @@ namespace PycMono.Project.Slot
         }
 
         /// <summary>
-        /// 增加属性
+        /// 获取属性值
         /// </summary>
-        /// <param name="addAttr">增加的属性</param>
-        public void AddValue(Dictionary<SlotAttrEnum, Int32> addAttr)
+        /// <param name="fae">属性枚举</param>
+        public Int32 GetValue(SlotAttrEnum fae)
         {
-            foreach (var item in addAttr)
+            if (!FightParAttrDict.ContainsKey(fae))
             {
-                AddValue(item.Key, item.Value);
+                throw new Exception($"PartAttr.GetValue未实现FightAttrEnum={fae.ToString()}的属性计算。");
             }
+
+            // 设置值
+            return FightParAttrDict[fae];
         }
 
         #endregion

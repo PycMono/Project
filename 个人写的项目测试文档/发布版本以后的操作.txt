@@ -1,0 +1,17 @@
+﻿
+代码数据库：
+1.将release_xxx合并到master
+2.删除所有已经合并了的分支和数据库
+3.删除release_xxx分支
+4.删除develop分支
+5.同步数据库 model_shuzhi -> model_master ,player_shuzhi -> player_master
+6.从master分支拉取新develop分支
+7.打上当前版本tag(vxxxxxx -> v开头代表版本，后续跟年月日)
+
+pb：
+1.将release_xxx合并到master
+2.删除所有已经合并了的分支
+3.删除release_xxx分支
+4.删除develop分支
+5.从master分支拉取新develop分支
+6.打上当前版本tag(vxxxxxx -> v开头代表版本，后续跟年月日)

@@ -25,5 +25,6 @@ namespace PycMono.Project.Slot
         Equip = 2,
 
         // 你可以定义其他枚举
+        // 比如至宝，坐骑之类的模块就加一个枚举增加一个实现类就ok了
     }
 }
