@@ -36,6 +36,8 @@ namespace PycMono.Project.Slot
                 result[hero.ID] = pa;
 
                 // 增加属性调用pa.AddValue()就ok;
+                // todo 临时加一个测试
+                pa.AddValue(new Dictionary<Int32, Int32>() { { 201, 100 } });
             }
 
             return result;

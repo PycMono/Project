@@ -41,11 +41,24 @@ namespace PycMono.Project.Slot
         /// 卡槽属性集合（模块对应的属性对象，只是方便查看数据，哪些模块加了多少，好定为属性来源）
         /// </summary>
         public Dictionary<SlotAttrTypeEnum, PartAttr> PartAttrs { get; set; }
-        
+
         /// <summary>
         /// 属性
         /// </summary>
         public PartAttr PartAttr { get; set; }
+
+        #endregion
+
+        #region 构造方法
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public Hero()
+        {
+            PartAttrs = new Dictionary<SlotAttrTypeEnum, PartAttr>();
+            PartAttr = new PartAttr();
+        }
 
         #endregion
     }

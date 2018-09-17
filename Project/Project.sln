@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotAttrHander", "SlotAttrHander\SlotAttrHander.csproj", "{BC6D6C97-7A9E-4099-B375-3A9A8851BFC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightHander", "FightHander\FightHander.csproj", "{EEED9405-72FE-439F-B9C8-82CB4E40EE7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{5CC1F36C-D462-4D0A-A6F9-5ACA97189BCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{BC6D6C97-7A9E-4099-B375-3A9A8851BFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC6D6C97-7A9E-4099-B375-3A9A8851BFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC6D6C97-7A9E-4099-B375-3A9A8851BFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEED9405-72FE-439F-B9C8-82CB4E40EE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEED9405-72FE-439F-B9C8-82CB4E40EE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEED9405-72FE-439F-B9C8-82CB4E40EE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEED9405-72FE-439F-B9C8-82CB4E40EE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC1F36C-D462-4D0A-A6F9-5ACA97189BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC1F36C-D462-4D0A-A6F9-5ACA97189BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC1F36C-D462-4D0A-A6F9-5ACA97189BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC1F36C-D462-4D0A-A6F9-5ACA97189BCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

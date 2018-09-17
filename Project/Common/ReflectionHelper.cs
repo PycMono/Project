@@ -12,7 +12,7 @@ using System.Linq;
 using System.Reflection;
 using System.Collections.Generic;
 
-namespace PycMono.Project.Slot
+namespace PycMono.Project.Common
 {
     /// <summary>
     /// 反射辅助类
@@ -33,10 +33,10 @@ namespace PycMono.Project.Slot
             if (types == null || types.Length == 0) return typeList;
 
             //遍历每一个类型，看看是否实现了指定的接口
-            foreach (Type type in types)
+            foreach (var type in types)
             {
                 //获得此类型所实现的所有接口列表
-                Type[] allInterfaces = type.GetInterfaces();
+                var allInterfaces = type.GetInterfaces();
 
                 //判断给出的接口类型列表是否存在于实现的所有接口列表中
                 if (interfaceTypes.All(item => allInterfaces.Contains(item)))

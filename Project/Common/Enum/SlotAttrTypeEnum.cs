@@ -15,14 +15,9 @@ namespace PycMono.Project.Slot
     public enum SlotAttrTypeEnum
     {
         /// <summary>
-        /// 武将
-        /// </summary>
-        Hero = 1,
-
-        /// <summary>
         /// 装备
         /// </summary>
-        Equip = 2,
+        Equip = 1,
 
         // 你可以定义其他枚举
         // 比如至宝，坐骑之类的模块就加一个枚举增加一个实现类就ok了

@@ -28,5 +28,10 @@ namespace PycMono.Project.Slot
         /// 防御
         /// </summary>
         DEF = 203,
+
+        /// <summary>
+        /// 兵力
+        /// </summary>
+        MHP = 204,
     }
 }

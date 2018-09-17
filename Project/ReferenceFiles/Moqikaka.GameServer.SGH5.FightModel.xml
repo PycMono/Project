@@ -1,0 +1,679 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Moqikaka.GameServer.SGH5.FightModel</name>
+    </assembly>
+    <members>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo">
+            <summary>
+            队列信息
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.ReportID">
+            <summary>
+            战报ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.IsWin">
+            <summary>
+            战斗是否胜利
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.AtkPlayerID">
+            <summary>
+            攻击方玩家ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.AtkQueueID">
+            <summary>
+            攻击方队列ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.DefQueueID">
+            <summary>
+            防御方队列ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.DefPlayerID">
+            <summary>
+            防御方玩家ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.AtkName">
+            <summary>
+            攻击方玩家名字
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.DefName">
+            <summary>
+            防御方玩家名字
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.FightObj">
+            <summary>
+            请求战斗服务器对象
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.FightReport">
+            <summary>
+            战报
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.DefRemainHpList">
+            <summary>
+            单个队列防御方剩余血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.AtkRemainHpList">
+            <summary>
+            单个队列攻击方剩余血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.Round">
+            <summary>
+            轮次
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueBattleInfo.Crdate">
+            <summary>
+            战斗时间
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.CalcRequest">
+            <summary>
+            游戏服务器到战斗服务器验证战斗结果时传输的对象
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.FullName">
+            <summary>
+            战斗实现类（子类）
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.AtkPlayerID">
+            <summary>
+            攻击方玩家id
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.AtkQueueID">
+            <summary>
+            攻击方队列ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.DefQueueID">
+            <summary>
+            防御方队列ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.DefPlayerID">
+            <summary>
+            防御方玩家ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.AtkPlayerName">
+            <summary>
+            玩家名称
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.DefPlayerName">
+            <summary>
+            玩家名称
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcRequest.FightObj">
+            <summary>
+            表示的是每场战斗的列表集合
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.CalcResponse">
+            <summary>
+            战斗服务器返回的战斗验证结果
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.CalcResponse.IsWin">
+            <summary>
+            是否胜利
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.CalcResponse.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.CalcResponse.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.CalcResponse.FightQueueInfo">
+            <summary>
+            战斗队列信息
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.ClientHero">
+            <summary>
+            客户端hero对象
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.HeroID">
+            <summary>
+            武将ＩＤ
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.Name">
+            <summary>
+            武将名字
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.Formation">
+            <summary>
+            站位
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.Type">
+            <summary>
+            兵种
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.AtkDistance">
+            <summary>
+            攻击距离
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.HP">
+            <summary>
+            生命
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.MHP">
+            <summary>
+            最大血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.ATK">
+            <summary>
+            攻击力
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.DEF">
+            <summary>
+            防御
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.HIT">
+            <summary>
+            命中
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.DOD">
+            <summary>
+            闪避
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.CRI">
+            <summary>
+            暴击
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.TEN">
+            <summary>
+            韧性
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.ProATK">
+            <summary>
+            强攻/攻城
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.ProDEF">
+            <summary>
+            强防/城防(守城)
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.NATKR">
+            <summary>
+            普攻加成
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.SATKR">
+            <summary>
+            技能加成
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.NDEFR">
+            <summary>
+            普攻免伤
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.SDEFR">
+            <summary>
+            技能免伤
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.SkillID">
+            <summary>
+            技能
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.BuffList">
+            <summary>
+            技能列表
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.HaremTalIDList">
+            <summary>
+            后宫佳丽天赋ID列表
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.NAR">
+            <summary>
+            普攻系数
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.Lv">
+            <summary>
+            武将等级
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.Exp">
+            <summary>
+            武将经验
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.Fap">
+            <summary>
+            战斗力
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.StepNum">
+            <summary>
+            进阶值
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.StarNum">
+            <summary>
+            突破星数
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientHero.StepStarNum">
+            <summary>
+            进阶星数
+            </summary>
+        </member>
+        <member name="M:Moqikaka.GameServer.SGH5.FightModel.ClientHero.DeepCopy">
+            <summary>
+            深拷贝
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.ClientQueue">
+            <summary>
+            gs队列信息（多队列采用）
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientQueue.PlayerID">
+            <summary>
+            玩家ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientQueue.QueueID">
+            <summary>
+            队列ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientQueue.PlayerName">
+            <summary>
+            玩家名字
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientQueue.QueueList">
+            <summary>
+            队列信息
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.ClientResponse">
+            <summary>
+            提供给客服端用
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ClientResponse.IsWin">
+            <summary>
+            是否胜利
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ClientResponse.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ClientResponse.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientResponse.FightQueueInfo">
+            <summary>
+            战斗队列信息
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.ClientTeamResponse">
+            <summary>
+            客服端暂时留用
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientTeamResponse.IsWin">
+            <summary>
+            战斗是否胜利
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ClientTeamResponse.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ClientTeamResponse.ErrorMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientTeamResponse.WinNum">
+            <summary>
+            胜利次数
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.ClientTeamResponse.FightQueueList">
+            <summary>
+            战斗后队列信息集合
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.ErrorCode">
+            <summary>
+            错误码，与客户端预定的
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ErrorCode.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ErrorCode.Success">
+            <summary>
+            校验成功
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ErrorCode.LuaResultError">
+            <summary>
+            lua文件返回值异常
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.ErrorCode.RequestDataError">
+            <summary>
+            请求数据异常
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.FightModule">
+            <summary>
+            战斗模块枚举（有些模块会重用，比如PVP）
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.CopyBattle">
+            <summary>
+            普通副本
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.WorldBoss">
+            <summary>
+            世界BOSS
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.LuckBoss">
+            <summary>
+            boss战役
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.PVP">
+            <summary>
+            PVP战斗
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.Ggzj">
+            <summary>
+            过关斩将
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.TeamFight">
+            <summary>
+            组队战斗
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.PaTa">
+            <summary>
+            爬塔
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.FightModule.XZYY">
+            <summary>
+            血战妖域
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.FightObject">
+            <summary>
+            战斗对象（一场战斗对应一个战斗对象）
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.FightObject.AtkTeam">
+            <summary>
+            供给方队伍
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.FightObject.DefTeam">
+            <summary>
+            敌方队伍
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.FightObject.RandSeed">
+            <summary>
+            随机数
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.FightObject.StageIndex">
+            <summary>
+            出场顺序
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.LuaResult">
+            <summary>
+            lua返回对象
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.LuaResult.Result">
+            <summary>
+            战斗胜利还是失败
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.LuaResult.Round">
+            <summary>
+            轮次
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.LuaResult.DefTeamHpList">
+            <summary>
+            防御方血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.LuaResult.AtkTeamHpList">
+            <summary>
+            攻击放剩余血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.LuaResult.FightReport">
+            <summary>
+            战报
+            </summary>
+        </member>
+        <member name="M:Moqikaka.GameServer.SGH5.FightModel.LuaResult.#ctor">
+            <summary>
+            lua返回对象
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.RemainHp">
+            <summary>
+            战斗结束后剩余的血量、怒气信息
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.RemainHp.HeroID">
+            <summary>
+            武将ＩＤ
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.RemainHp.Formation">
+            <summary>
+            武将站位
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.RemainHp.MHP">
+            <summary>
+            中血量
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.RemainHp.Damage">
+            <summary>
+            造成的总伤害
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.RemainHp.Dead">
+            <summary>
+            是否死亡
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.RemainHp.HP">
+            <summary>
+            剩余血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.RemainHp.StepStarNum">
+            <summary>
+            进阶星数
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.QueueRemainHp">
+            <summary>
+            队列血量信息
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueRemainHp.PlayerID">
+            <summary>
+            玩家ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueRemainHp.QueueID">
+            <summary>
+            队列ID
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.QueueRemainHp.RemainHpList">
+            <summary>
+            血量信息
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.TeamCalcRequest">
+            <summary>
+            组队战斗请求对象
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcRequest.FullName">
+            <summary>
+            战斗实现类（子类）
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcRequest.IsSaveHP">
+            <summary>
+            是否保存血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcRequest.IsWheelWar">
+            <summary>
+            是否是车轮战
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcRequest.TempAttrIsEffect">
+            <summary>
+            临时属性是否生效
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcRequest.AtkQueueList">
+            <summary>
+            攻击方队伍集合
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcRequest.DefQueueList">
+            <summary>
+            防御方队伍集合
+            </summary>
+        </member>
+        <member name="T:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse">
+            <summary>
+            战斗服务器返回的多队列战斗验证结果
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.IsWin">
+            <summary>
+            战斗是否胜利
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.ErrorMsg">
+            <summary>
+            错误内容
+            </summary>
+        </member>
+        <member name="F:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.WinNum">
+            <summary>
+            胜利队列数量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.AtkMHP">
+            <summary>
+            攻击方总血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.DefMHP">
+            <summary>
+            防御方总血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.AtkWinQueuNum">
+            <summary>
+            攻击方胜利队列数
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.DefWinQueuNum">
+            <summary>
+            防御方胜利队列数量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.TempAttrIsEffect">
+            <summary>
+            临时属性是否生效
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.QueueBattleInfoList">
+            <summary>
+            战斗后队列信息集合
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.AtkRemainHpList">
+            <summary>
+            攻击方剩余血量
+            </summary>
+        </member>
+        <member name="P:Moqikaka.GameServer.SGH5.FightModel.TeamCalcResponse.DefRemainHpList">
+            <summary>
+            防御方剩余血量
+            </summary>
+        </member>
+    </members>
+</doc>

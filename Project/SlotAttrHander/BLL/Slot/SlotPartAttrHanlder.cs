@@ -10,8 +10,11 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+
 namespace PycMono.Project.Slot
 {
+    using PycMono.Project.Common;
+
     /// <summary>
     /// 卡槽属性处理
     /// </summary>
@@ -123,19 +126,21 @@ namespace PycMono.Project.Slot
             partAttrMethodDict.Clear();
 
             var implTypes = ReflectionHelper.GetTypeListOfImplementedInterface(typeof(ISlotPartAttr));
-            if (implTypes != null && implTypes.Any())
+            if (implTypes == null || !implTypes.Any())
             {
-                foreach (Type type in implTypes)
-                {
-                    // 使用接口来生成对象
-                    var item = type.Assembly.CreateInstance(type.FullName) as ISlotPartAttr;
-                    if (partAttrMethodDict.ContainsKey(item.AttrType))
-                    {
-                        throw new Exception($"已经存在AttrType={item.AttrType}的卡槽子属性计算实现");
-                    }
+                return;
+            }
 
-                    partAttrMethodDict[item.AttrType] = item;
+            foreach (var type in implTypes)
+            {
+                // 使用接口来生成对象
+                var item = type.Assembly.CreateInstance(type.FullName) as ISlotPartAttr;
+                if (partAttrMethodDict.ContainsKey(item.AttrType))
+                {
+                    throw new Exception($"已经存在AttrType={item.AttrType}的卡槽子属性计算实现");
                 }
+
+                partAttrMethodDict[item.AttrType] = item;
             }
         }
 
