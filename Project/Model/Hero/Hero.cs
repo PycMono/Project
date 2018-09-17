@@ -9,8 +9,11 @@
 
 using System;
 using System.Collections.Generic;
-namespace PycMono.Project.Slot
+
+namespace PycMono.Project.Model
 {
+    using PycMono.Project.Model.Enum;
+
     /// <summary>
     /// 玩家武将信息表
     /// </summary>

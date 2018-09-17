@@ -7,7 +7,7 @@
 //修改记录：
 //***********************************************************************************
 
-namespace PycMono.Project.Slot
+namespace PycMono.Project.Model.Enum
 {
     /// <summary>
     /// 属性枚举

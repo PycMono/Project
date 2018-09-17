@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PycMono.Project.Common
+namespace PycMono.Project.Model
 {
     /// <summary>
     /// 槽位对象

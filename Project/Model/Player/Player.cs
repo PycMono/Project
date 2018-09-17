@@ -15,7 +15,7 @@
 
 using System;
 
-namespace PycMono.Project.Common
+namespace PycMono.Project.Model
 {
     /// <summary>
     /// 玩家对象类

@@ -11,9 +11,10 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace PycMono.Project.Slot
+namespace PycMono.Project.Model
 {
     using Moqikaka.Util.Json;
+    using PycMono.Project.Model.Enum;
 
     /// <summary>
     /// 属性处理逻辑类

@@ -4,28 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC6D6C97-7A9E-4099-B375-3A9A8851BFC2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SlotAttrHander</RootNamespace>
-    <AssemblyName>SlotAttrHander</AssemblyName>
+    <ProjectGuid>{5CC1F36C-D462-4D0A-A6F9-5ACA97189BCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,10 +31,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="newtonsoft.json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ReferenceFiles\newtonsoft.json.dll</HintPath>
+    <Reference Include="Moqikaka.GameServer.SGH5.FightModel">
+      <HintPath>..\ReferenceFiles\Moqikaka.GameServer.SGH5.FightModel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,26 +51,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Slot\Refactoring\EquipPartAttrImpl.cs" />
-    <Compile Include="BLL\Slot\SlotPartAttrHanlder.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BattleQueue\BattleQueueInfo.cs" />
+    <Compile Include="Enum\SlotAttrEnum.cs" />
+    <Compile Include="Enum\SlotAttrTypeEnum.cs" />
+    <Compile Include="FightReport\CHeroBaseInfo.cs" />
+    <Compile Include="FightReport\CPlayerBaseInfo.cs" />
+    <Compile Include="FightReport\CQueueBaseInfo.cs" />
+    <Compile Include="FightReport\GlobalFightReport.cs" />
+    <Compile Include="Hero\Hero.cs" />
+    <Compile Include="Player\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BLL\Slot\Refactoring\ISlotPartAttr.cs" />
+    <Compile Include="ReflectionHelper.cs" />
+    <Compile Include="BattleQueue\SlotObj.cs" />
+    <Compile Include="Slot\PartAttr.cs" />
+    <Compile Include="Slot\SlotCalcObj.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Readme.txt" />

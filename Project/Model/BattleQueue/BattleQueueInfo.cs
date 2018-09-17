@@ -9,7 +9,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PycMono.Project.Common
+namespace PycMono.Project.Model
 {
     using Moqikaka.Util.Lock;
     using Moqikaka.Util.Json;

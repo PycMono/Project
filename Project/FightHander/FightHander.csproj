@@ -32,7 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moqikaka.GameServer.SGH5.FightModel">
+    <Reference Include="Moqikaka.GameServer.SGH5.FightModel, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ReferenceFiles\Moqikaka.GameServer.SGH5.FightModel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -43,11 +44,15 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Util">
+    <Reference Include="Util, Version=1.2.16.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ReferenceFiles\Util.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FightReport\Impl\CopyFightReportImpl.cs" />
+    <Compile Include="FightReport\FightReportBase.cs" />
+    <Compile Include="FightReport\GlobalFightReportBLL_C.cs" />
     <Compile Include="Fight\FightBase.cs" />
     <Compile Include="Fight\Impl\CopyFightImpl.cs" />
     <Compile Include="Fight\MultiQeueFightBase.cs" />
@@ -61,9 +66,12 @@
     <Content Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
       <Project>{5cc1f36c-d462-4d0a-a6f9-5aca97189bca}</Project>
-      <Name>Common</Name>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

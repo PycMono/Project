@@ -6,13 +6,10 @@
 // 日期：2017/5/23 13:09:47
 // 修改记录：
 //***********************************************************************************
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PycMono.Project.Slot
+using System.Collections.Generic;
+
+namespace PycMono.Project.Model
 {
     /// <summary>
     /// 属性计算对象

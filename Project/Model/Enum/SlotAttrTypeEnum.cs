@@ -7,7 +7,7 @@
 // 修改记录：
 //***********************************************************************************
 
-namespace PycMono.Project.Slot
+namespace PycMono.Project.Model.Enum
 {
     /// <summary>
     /// 卡槽属性枚举（属性变动的模块对应的枚举）
