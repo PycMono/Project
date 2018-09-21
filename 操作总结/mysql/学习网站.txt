@@ -1,0 +1,4 @@
+http://www.php.cn/course/200.html ---布尔教育燕十八mysql优化视频教程
+https://my.oschina.net/u/1859679/blog/1589575 ----什么是DB的三星索引？
+https://www.cnblogs.com/geningchao/p/6649907.html ----MySQL大数据量分页查询方法及其优化
+https://my.oschina.net/ruoli/blog/1786330 ----最快速的办法解决MySQL数据量增大之后翻页慢问题
