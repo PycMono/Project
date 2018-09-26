@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FightHander.Fight
+namespace PycMono.Project.Fight
 {
     using PycMono.Project.Model;
     using Moqikaka.GameServer.SGH5.FightModel;

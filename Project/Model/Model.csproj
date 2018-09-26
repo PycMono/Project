@@ -54,6 +54,7 @@
     <Compile Include="BattleQueue\BattleQueueInfo.cs" />
     <Compile Include="Enum\SlotAttrEnum.cs" />
     <Compile Include="Enum\SlotAttrTypeEnum.cs" />
+    <Compile Include="Event\GlobalEvent.cs" />
     <Compile Include="FightReport\CHeroBaseInfo.cs" />
     <Compile Include="FightReport\CPlayerBaseInfo.cs" />
     <Compile Include="FightReport\CQueueBaseInfo.cs" />

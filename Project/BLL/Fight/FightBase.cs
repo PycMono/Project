@@ -11,8 +11,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-
-namespace FightHander.Fight
+namespace PycMono.Project.Fight
 {
     using Moqikaka.Util.Log;
     using Moqikaka.Util.Web;

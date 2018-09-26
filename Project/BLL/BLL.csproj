@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event\GEventBase.cs" />
     <Compile Include="FightReport\FightReportBase.cs" />
     <Compile Include="FightReport\GlobalFightReportBLL_C.cs" />
     <Compile Include="FightReport\Impl\CopyFightReportImpl.cs" />
@@ -68,6 +69,9 @@
       <Project>{5cc1f36c-d462-4d0a-a6f9-5aca97189bca}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Event\Impl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

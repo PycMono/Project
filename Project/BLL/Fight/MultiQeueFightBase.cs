@@ -9,7 +9,7 @@
 
 using System.Collections.Generic;
 
-namespace FightHander.Fight
+namespace PycMono.Project.Fight
 {
     using Moqikaka.GameServer.SGH5.FightModel;
 
