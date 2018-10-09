@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BattleQueue\BattleQueueInfo.cs" />
+    <Compile Include="Enum\GEventTypeEnum.cs" />
     <Compile Include="Enum\SlotAttrEnum.cs" />
     <Compile Include="Enum\SlotAttrTypeEnum.cs" />
     <Compile Include="Event\GlobalEvent.cs" />

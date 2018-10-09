@@ -58,3 +58,26 @@ FROM `p_country` a
 INNER JOIN TitleTemp b ON a.TitleLv=b.Lv;
 
 DROP TABLE IF EXISTS TitleTemp; 
+
+-- 查询两张表中不相同的数据，并且将不同的数据插入到另一张表中，采用临时表的形式
+CREATE TABLE `b_modle_temp` (
+  `NatalieModelID` INT(10) UNSIGNED NOT NULL COMMENT '女将模型ID',
+  PRIMARY KEY (`NatalieModelID`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COMMENT='后宫女将信息';
+INSERT INTO b_modle_temp VALUES (16010011),(16010028),(16010022),(16010027),(16010008),(16010019),(16010029),(16010030);
+
+CREATE TABLE `p_harem_natalie_temp` (
+  `PlayerID` CHAR(36) NOT NULL COMMENT '玩家ID',
+  `NatalieModelID` INT(10) UNSIGNED NOT NULL COMMENT '女将模型ID',
+  PRIMARY KEY (`PlayerID`,`NatalieModelID`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COMMENT='后宫女将信息';
+
+INSERT INTO p_harem_natalie_temp (SELECT a.playerid,b.NatalieModelID FROM (SELECT playerid FROM p_harem_natalie GROUP BY playerid) AS a,b_modle_temp AS b);
+INSERT INTO p_harem_natalie (SELECT a.playerid,UUID(),a.NatalieModelID ,1,'00000000-0000-0000-0000-000000000000',NOW() FROM p_harem_natalie_temp AS a WHERE NOT EXISTS (SELECT * FROM p_harem_natalie WHERE playerid=a.playerid AND NatalieModelID=a.NatalieModelID))
+
+-- 临时表删除
+DROP TABLE IF EXISTS b_modle_temp;
+DROP TABLE IF EXISTS p_harem_natalie_temp; 
+
+
+

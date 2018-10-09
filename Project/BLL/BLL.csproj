@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Event\GEventBase.cs" />
+    <Compile Include="Event\GEventHandle.cs" />
+    <Compile Include="Event\GlobalEventBLL.cs" />
+    <Compile Include="Event\Impl\GTreasureEventImpl.cs" />
     <Compile Include="FightReport\FightReportBase.cs" />
     <Compile Include="FightReport\GlobalFightReportBLL_C.cs" />
     <Compile Include="FightReport\Impl\CopyFightReportImpl.cs" />
@@ -71,7 +74,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Event\Impl\" />
+    <Content Include="Event\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

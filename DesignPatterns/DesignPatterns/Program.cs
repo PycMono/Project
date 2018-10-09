@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using DesignPatterns.BuilderPattern;
+using DesignPatterns.TemplatePattern;
 
 namespace DesignPatterns
 {
@@ -36,6 +38,18 @@ namespace DesignPatterns
             //calcAddImpl.NumberB = 10;
             //calcAddImpl.NumberA = 9;
             //Console.WriteLine(calcAddImpl.GetResult());
+
+            // 模板模式
+            //var copyFightImpl = new CopyFightImpl();
+            //copyFightImpl.BuildFight();
+
+            //var earthFightImpl = new EarthFightImpl();
+            //earthFightImpl.BuildFight();
+
+            // 建造者模式
+            var concreteBuilderImpl = new ConcreteBuilderImpl();
+            Director.Construct(concreteBuilderImpl);// 构造数据
+            Console.WriteLine(concreteBuilderImpl.GetBody());
 
             Console.ReadKey();
         }
