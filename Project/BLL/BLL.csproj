@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,8 @@
     <Compile Include="Fight\FightBase.cs" />
     <Compile Include="Fight\Impl\CopyFightImpl.cs" />
     <Compile Include="Fight\MultiQeueFightBase.cs" />
+    <Compile Include="GameResource\GameResourceHandleBLL.cs" />
+    <Compile Include="GameResource\ResourceBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Slot\Refactoring\EquipPartAttrImpl.cs" />

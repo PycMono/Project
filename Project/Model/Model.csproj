@@ -52,7 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BattleQueue\BattleQueueInfo.cs" />
+    <Compile Include="CommonModel\GameResourceObject.cs" />
     <Compile Include="Enum\GEventTypeEnum.cs" />
+    <Compile Include="Enum\ResourceTypeEnum.cs" />
+    <Compile Include="Enum\ResourceTypeSubEnum.cs" />
     <Compile Include="Enum\SlotAttrEnum.cs" />
     <Compile Include="Enum\SlotAttrTypeEnum.cs" />
     <Compile Include="Event\GlobalEvent.cs" />
